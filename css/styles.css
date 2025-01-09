@@ -1,0 +1,7 @@
+body {
+    background-color: #eee;
+
+    /* This a comment
+    It works across multiple lines */
+    margin-bottom: 100vh;
+}

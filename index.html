@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/icon.png">
+
+    <style>
+        body {}
+    </style>
+    <title>Intro to HTML</title>
+</head>
+
+<body>
+    <!-- headings range from h1 to h6 -->
+    <h1>Heading</h1>
+    <h2>fdsaf</h2>
+    <h3>fdsaf</h3>
+    <h4>fdsaf</h4>
+    <h5>fdsaf</h5>
+    <h6>fdsafdsa</h6>
+
+    <!-- Paragraphs contain text. Surprise! -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <strong>Blanditiis</strong>, <b>mollitia</b> optio amet
+        dignissimos praesentium corporis quae quasi libero non ducimus quia voluptatibus recusandae quaerat atque beatae
+        porro, quas debitis. <i>Blanditiis.</i> Omnis.</p>
+
+
+    <!-- Hyperlinks are set up with anchor tags - <a> -->
+    <!-- href is the URL or relative path to the file -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. mollitia optio amet dignissimos praesentium corporis
+        quae quasi libero non ducimus quia voluptatibus recusandae quaerat atque beatae porro, quas debitis. <a
+            href="about.html">About.</a></p>
+
+    <!-- Adding target="_blank" opens it in a new tab -->
+    <a href="about.html">open in current tab.</a>
+    <a href="about.html" target="_blank">Open in new tab.</a>
+
+    <!-- img tag lets us add images -->
+    <img src="" alt="A boat">
+    <!-- br is for line breaks  -->
+    <br>
+    <img src="images/boat.jpg" alt="A boat">
+
+    <pre>This is for code!</pre>
+
+    <blockquote>This is a blockquote. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, itaque facilis?
+        Magni suscipit animi quasi, nihil aut eaque tenetur recusandae quam ipsam, aspernatur unde, asperiores adipisci
+        reprehenderit? Dolores, fugit quos?</blockquote>
+
+    <div style="background-color: grey;">
+        <h2>This is a section of content</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dicta ducimus consequatur rem consequuntur!
+            Recusandae, quisquam. Repudiandae suscipit autem tempora laboriosam itaque. Corrupti maiores dolor quod! Non
+            illo debitis veritatis!</p>
+    </div>
+    <div style="background-color: grey;">
+        <h2>This is a section of content</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dicta ducimus consequatur rem consequuntur!
+            Recusandae, quisquam. Repudiandae suscipit autem tempora laboriosam itaque. Corrupti maiores dolor quod! Non
+            illo debitis veritatis!</p>
+    </div>
+
+    <p><span style="color: lightblue; background: darkblue;">Lorem ipsum dolor</span> sit amet, consectetur adipisicing
+        elit. Incidunt accusamus culpa perspiciatis, eius quae veritatis! Illo, vitae distinctio unde fugit libero rem
+        ad! Cum ipsa vel error odit, architecto dolores?</p>
+
+    <!-- common semantic HTML containers. These are block containers for content on the page that communicate the intended structure of the page. -->
+    <header>
+        <nav></nav>
+    </header>
+    <main>
+        <section></section>
+        <section></section>
+        <section></section>
+    </main>
+    <footer></footer>
+
+    <form action="about.html" method="get">
+        <label for="usernameField">Username: </label>
+        <input id='usernameField' name='username' type="text" required>
+        <br><label for="passwordField">Password: </label>
+        <input id='passwordField' name="password" type="password" required>
+        <br>
+
+        <label for="ageField">Age: </label>
+        <input id='ageField' name="age" type="number">
+        <br>
+
+        <label for="birthdayField">Birthday: </label>
+        <input id='birthdayField' name="birthday" type="date">
+        <br>
+
+        <label for="petsField">Pets: </label>
+        <input id='petsField' name="pets" type="checkbox">
+        <br>
+
+        <div>
+            <h3>Hair Colour:</h3>
+            <input id='hairBrownField' name="hair" type="radio" value="brown">
+            <label for="hairBrownField">Brown</label>
+            
+            <input id='hairBlackField' name="hair" type="radio" value="black">
+            <label for="hairBlackField">Black </label>
+            
+            <input id='hairBlondeField' name="hair" type="radio" value="blonde">
+            <label for="hairBlondeField">Blonde </label>
+        </div>
+        <br>
+
+
+        <button>Submit</button>
+    </form>
+
+
+</body>
+
+</html>
