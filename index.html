@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <!-- This is a comment -->
     <!-- headings range from h1 to h6 -->
     <h1>Heading</h1>
     <h2>fdsaf</h2>
@@ -40,17 +41,23 @@
     <a href="about.html" target="_blank">Open in new tab.</a>
 
     <!-- img tag lets us add images -->
+    <!-- If the image can't be loaded, it will display alt text -->
     <img src="" alt="A boat">
     <!-- br is for line breaks  -->
     <br>
     <img src="images/boat.jpg" alt="A boat">
 
+    <!-- pre tags are for preformatted text. Typically this is for code snippets because it changes text to a monospace font - the same kind code editors use. -->
     <pre>This is for code!</pre>
 
+    <!-- blockquote is used to quote paragraphs of text. -->
     <blockquote>This is a blockquote. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, itaque facilis?
         Magni suscipit animi quasi, nihil aut eaque tenetur recusandae quam ipsam, aspernatur unde, asperiores adipisci
         reprehenderit? Dolores, fugit quos?</blockquote>
 
+    <!-- divs are used as containers to group other elements. This is critical for constructing more complicated pages. HTML relies on having well-structured content. -->
+    <!-- divs are block elements - they stack on top of each other vertically, and take up the full width of the page. Most elements are block elements.  -->
+    <!-- styles can be applied directly on elements, though this is generally not the best way to style elements. Here it's used as an example. -->
     <div style="background-color: grey;">
         <h2>This is a section of content</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dicta ducimus consequatur rem consequuntur!
@@ -64,6 +71,8 @@
             illo debitis veritatis!</p>
     </div>
 
+    <!-- spans are used to wrap sections of text. They are inline elements, which means that they lie horizontally on the page, like text in a paragraph. -->
+    <!-- A few elements are inline by default, such as <b> <i> <a> and <img>. -->
     <p><span style="color: lightblue; background: darkblue;">Lorem ipsum dolor</span> sit amet, consectetur adipisicing
         elit. Incidunt accusamus culpa perspiciatis, eius quae veritatis! Illo, vitae distinctio unde fugit libero rem
         ad! Cum ipsa vel error odit, architecto dolores?</p>
@@ -79,10 +88,19 @@
     </main>
     <footer></footer>
 
+    <!-- forms have a basic structure - a form element which contains the fields, pairs of input (or other alternatives) and label tags, and a button to submit the form --> 
+    <!-- forms, when submitted go to another page, the URL for which is provided through the action attribute. If nothing is provided, it will just reload the page. Usually some javascript will do something with this information. -->
+    <!-- method is the way this information is provided. the default is 'get', which provides the information through the url - simple, but not secure. 'post' sends this information more securely but requires a more advanced way of receiving the information. -->
     <form action="about.html" method="get">
+        <!-- inputs need an id and a name, usually they have the same value. The name is the identifier used by the form to refer to the value the user puts into it. The id is used by the HTML to allow other elements to reference the input field. -->
+        <!-- labels need a for attribute, which holds the reference to the id of the related input field. This is important for accessibility reasons. -->
         <label for="usernameField">Username: </label>
         <input id='usernameField' name='username' type="text" required>
+        <!-- br tags are inline tags that act as line breaks. These are less common these days, but can be handy to split up inline elements withint styling them. -->
         <br><label for="passwordField">Password: </label>
+        <!-- input tags can take a type attribute. There are many values you can assign to them, and they change the basic behaviour of the tag. The default is 'text'. -->
+        <!-- the 'password' type hides the user input. email applies some basic validation to ensure there's an @ symbol. Plenty more exist. Many of these types change the behaviour of the keyboard on mobile.  -->
+        <!-- Adding 'required' to an input prevents the form from being submitted if there's nothing in the field. -->
         <input id='passwordField' name="password" type="password" required>
         <br>
 
@@ -99,6 +117,7 @@
         <br>
 
         <div>
+            <!-- Radio buttons are slightly different from other input types. All  radio buttons in a set must have the same name attribute. To differentiate them when the form is submitted, they should have value attributes which indicate what value should be passed along when the form is submitted. -->
             <h3>Hair Colour:</h3>
             <input id='hairBrownField' name="hair" type="radio" value="brown">
             <label for="hairBrownField">Brown</label>
@@ -111,7 +130,7 @@
         </div>
         <br>
 
-
+        <!-- buttons are usually used to have something happen on the page (through javascript), or to submit a form. If placed within a form element, the button will submit the form. -->
         <button>Submit</button>
     </form>
 
